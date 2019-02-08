@@ -1,0 +1,10 @@
+create table rents (
+rent_ID int(11) not null auto_increment,
+book_id int(11) not null,
+reader_id int(11) not null,
+rent_date datetime not null,
+return_date datetime,
+primary key (Rent_ID),
+foreign key (book_id) references books(book_id),
+foreign key (reader_id) references readers(reader_id)
+);
